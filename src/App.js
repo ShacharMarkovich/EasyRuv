@@ -1,7 +1,7 @@
 import './App.css'
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from "react-router-dom"
 import React, { useState } from 'react'
-import Connect from './Connect/Connect';
+import Connect, { align_center_style } from './Connect/Connect';
 import MyCities from './Cities';
 import logo from './images/logo.png';
 
@@ -12,8 +12,6 @@ function App() {
   const [isLogin, setIsLogin] = useState(false)
 
   const LogoutHandler = () => setIsLogin(false)
-  var hello;
-  fetch("/").then(data => data.json()).then(data => hello = data)
   return (
     <Router>
       <div class="site-header">
@@ -49,7 +47,11 @@ function App() {
             }
           </Route>
           <Route exact path="/">
-            {hello}
+            <div style={align_center_style}>
+              <img src={logo} />
+              <h2>...מתערבים שזה חכם</h2>
+              <h4><Link class="btn btn-secondary" to='/connect'> Join Today</Link></h4>
+            </div>
           </Route>
         </managerContext.Provider>
       </Switch>
