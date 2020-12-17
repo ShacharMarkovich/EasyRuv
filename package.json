@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^5.11.6",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-hook-form": "^6.13.1",
@@ -16,10 +17,16 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "start-api": "cd API && flask run --no-debugger",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:5000",
+  "python.linting.pylintArgs": [
+    "--load-plugins",
+    "pylint-flask"
+  ],
   "eslintConfig": {
     "extends": [
       "react-app",

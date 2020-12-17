@@ -12,14 +12,15 @@ function App() {
   const [isLogin, setIsLogin] = useState(false)
 
   const LogoutHandler = () => setIsLogin(false)
-
+  var hello;
+  fetch("/").then(data => data.json()).then(data => hello = data)
   return (
     <Router>
       <div class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
           <div class="container">
-            <img src={logo} height="50px"/>
-            <Link class="navbar-brand mr-4" to="/">EasyRuv</Link>
+
+            <Link class="navbar-brand mr-4" to="/"> <img src={logo} height="50px" /></Link>
             <div class="collapse navbar-collapse" id="navbarToggle">
               <div class="navbar-nav mr-auto">
                 {isLogin && <Link class="nav-item nav-link" to="/my-cities">View Cities</Link>}
@@ -48,7 +49,7 @@ function App() {
             }
           </Route>
           <Route exact path="/">
-            <h1>Home Page</h1>
+            {hello}
           </Route>
         </managerContext.Provider>
       </Switch>
