@@ -1,5 +1,5 @@
 # EasyRuv React Interface
-<img src="https://github.com/ShacharMarkovich/EasyRuv/blob/master/src/images/logo.png" width="48">
+<img src="https://github.com/ShacharMarkovich/EasyRuv/blob/master/src/images/logo.png" width="360">
 
 ## Available Scripts
 
