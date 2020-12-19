@@ -1,6 +1,5 @@
-# Getting Started with EasyRuv React Interface
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# EasyRuv React Interface
+<img src="https://github.com/ShacharMarkovich/EasyRuv/blob/master/src/images/logo.png" width="48">
 
 ## Available Scripts
 
